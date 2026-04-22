@@ -4,9 +4,9 @@ Because zsh configuration file `.zshrc` has custom configuration different in ma
 
 Current configuration contains:
 
-+ shell prompt config
 + network proxy config
 + custom `PATH` config
 + custom alias config
 + enable zsh history
 + config zsh plugins
++ shell prompt config
