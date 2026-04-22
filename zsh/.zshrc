@@ -12,6 +12,8 @@ proxy_off() {
     unset https_proxy
 }
 
+proxy_on
+
 ## set a list of custom installed app path
 export PATH=$PATH
 
