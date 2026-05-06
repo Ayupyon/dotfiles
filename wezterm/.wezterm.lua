@@ -7,6 +7,7 @@ config.adjust_window_size_when_changing_font_size = false
 
 local is_windows = wezterm.target_triple:find("windows") ~= nil
 if is_windows then
+	-- use powershell 7 as default shell in windows
 	config.default_prog = { "pwsh.exe" }
 end
 
