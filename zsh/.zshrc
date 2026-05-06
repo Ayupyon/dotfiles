@@ -21,12 +21,12 @@ export PATH=$PATH
 alias ls="ls --color=auto"
 
 ## enable zsh history
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
 ## setup zsh plugins
-PLUGIN_HOME=~/.zsh_plugins
+PLUGIN_HOME=$HOME/.zsh_plugins
 source $PLUGIN_HOME/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGIN_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
