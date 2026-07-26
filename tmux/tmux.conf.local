@@ -397,6 +397,10 @@ set -s set-clipboard on
 set -g status-keys vi
 set -g mode-keys vi
 
+# workaround for Windows OpenSSH
+# without this, every time enter tmux by OpenSSH will be added some strange characters sequence to input
+set -sg escape-time 50
+
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
 # unbind C-a
