@@ -3,3 +3,6 @@ onboarding = false
 [keys]
 prefix = "ctrl+a"
 detach = ["prefix+d", "prefix+q"]
+
+[ui]
+sidebar_start_collapsed = true
