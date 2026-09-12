@@ -1,0 +1,7 @@
+interface:
+  display_name: "Python Style Guide"
+  short_description: "Apply global Python style and checks"
+  default_prompt: "Use $python-style-guide when writing or reviewing this Python code."
+
+policy:
+  allow_implicit_invocation: true
