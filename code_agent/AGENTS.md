@@ -10,4 +10,4 @@
 
 ## Code Writing Conventions
 
-+ All names in code should reflect the usage of named entities(variable, function, class, etc.), don't abbreviate it unless the abbreviation is widely used (like i, j, k for iteration).
++ All names in code should reflect the usage of named entities(variable, function, class, etc.), don't abbreviate it unless the abbreviation is widely used (for example, i, j, k for iteration is acceptable to use).
