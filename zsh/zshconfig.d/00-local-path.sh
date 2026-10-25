@@ -1,0 +1,2 @@
+LOCAL_HOME=$HOME/.local/bin
+PATH=$LOCAL_HOME:$PATH
