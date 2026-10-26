@@ -11,6 +11,24 @@ local is_windows = wezterm.target_triple:find("windows") ~= nil
 if is_windows then
   -- use powershell 7 as default shell in windows
   config.default_prog = { "pwsh.exe" }
+
+  -- simplify tab title display
+  wezterm.on("format-tab-title", function(tab)
+    local title = tab.tab_title
+
+    if not title or title == "" then
+      title = tab.active_pane.title
+      title = title:match("[^/\\]+$") or title
+      title = title:gsub("%.exe$", "")
+    end
+
+    return string.format("%d: %s", tab.tab_index + 1, title)
+  end)
+
+  --- simplify window title display
+  wezterm.on("format-window-title", function()
+    return "WezTerm"
+  end)
 end
 
 -- tmux-style leader key (Ctrl+D); press Ctrl+D twice to send a real EOF
