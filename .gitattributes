@@ -1,0 +1,3 @@
+*.sh text eol=lf
+zsh/.zshenv text eol=lf
+zsh/.zshrc text eol=lf
