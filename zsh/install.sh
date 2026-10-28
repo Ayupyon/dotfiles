@@ -6,3 +6,4 @@ app_dir=$(CDPATH= cd -- "$(dirname "$0")" && pwd -P)
 install_link "$app_dir/zshconfig.d" "$HOME/.config/zsh/zshconfig.d"
 install_link "$app_dir/.zshenv" "${ZDOTDIR:-$HOME}/.zshenv"
 install_link "$app_dir/.zshrc" "${ZDOTDIR:-$HOME}/.zshrc"
+install_link "$app_dir/.zsh_plugins.txt" "${ZDOTDIR:-$HOME}/.zsh_plugins.txt"
