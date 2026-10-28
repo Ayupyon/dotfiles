@@ -90,7 +90,7 @@ for skill_directory in "$fixture_repo"/code_agent/skills/*; do
 done
 expected_link=$(printf '%s\t%s' "$fixture_repo/code_agent/AGENTS.md" "${CODEX_HOME:-$HOME/.codex}/AGENTS.md")
 grep -Fx "$expected_link" "$DOTFILES_TEST_PLAN" > /dev/null || fail 'Wrong Codex global instructions path'
-expected_link_count=$((8 + skill_count))
+expected_link_count=$((9 + skill_count))
 [ "$(wc -l < "$DOTFILES_TEST_PLAN" | tr -d ' ')" -eq "$expected_link_count" ] || fail 'Unexpected Linux installation plan'
 if grep -E '/(pwsh)/' "$DOTFILES_TEST_PLAN"; then
     fail 'Unexpected pwsh installation on Linux'
