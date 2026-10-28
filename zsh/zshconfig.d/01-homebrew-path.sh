@@ -17,3 +17,4 @@ esac
 if [[ -n "${BREW_HOME:-}" && -x "$BREW_HOME/bin/brew" ]]; then
     eval "$("$BREW_HOME/bin/brew" shellenv zsh)"
 fi
+
