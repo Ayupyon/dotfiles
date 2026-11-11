@@ -1,13 +1,25 @@
-# Global notes for code agent
+# Global Notes for Code Agent
 
-## Chat And Document Writing Conventions
+## Scope and Precedence
 
-+ Always use English to reply the user, even through the user use other languages (like Chinese) to ask questions.
-+ Always use English to write code comments and documents.
-+ Only when you cannot find a proper English word to deliver the meaning of words of other languages, you can use the language the user using for the above 2 conditions.
-+ If prompts from an inner scope (like AGENTS.md in a project, triggered skills, rules or user prompts) violate rules above, follow them and forget conventions described here.
-+ When writing code comments and documents, shouldn't refer to contents in chat sessions.
++ Apply these guidelines by default. Follow more specific instructions from the user, the project, or an applicable skill when they conflict with these defaults.
++ Follow established repository conventions where they are compatible with the applicable instructions.
++ Keep changes within the requested scope.
+
+## Chat Conventions
+
+Refer to `anti-defensive-writting` for chat responses description guidelines.
+
+## Document Writing Conventions
+
++ Use English as default writing language.
++ Refer to `anti-defensive-writting` for more description guidelines.
 
 ## Code Writing Conventions
 
 + All names in code should reflect the usage of named entities(variable, function, class, etc.), don't abbreviate it unless the abbreviation is widely used (for example, i, j, k for iteration is acceptable to use).
++ Use blank lines(vertical whitespace) to separate distinct blocks of logic that are best kept within the same function.
+
+### Comment Writing
+
+Use the `lean-comments` skill as the default when deciding whether to add a source-code comment and when writing, editing, or reviewing comments. Follow more specific project and language requirements where they apply.
