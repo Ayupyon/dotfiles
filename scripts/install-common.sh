@@ -10,7 +10,7 @@ install_link() (
         printf 'Missing source: %s\n' "$source_path" >&2
         return 1
     fi
-    if [ -L "$target_path" ] && [ "$source_path" -ef "$target_path" ]; then
+    if [ "$source_path" -ef "$target_path" ]; then
         printf 'Already linked: %s\n' "$target_path"
         return 0
     fi

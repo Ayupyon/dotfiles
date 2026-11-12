@@ -40,6 +40,12 @@ printf 'y\n' | install_link "$test_root/source directory" "$test_root/target dir
 set -- "$test_root/target directory".dotfiles-backup-*
 [ -f "$1/.hidden" ] || fail 'Directory backup lost hidden file'
 
+directory_source="$test_root/repository/zshconfig.d"
+mkdir -p "$directory_source"
+ln -s "$test_root/repository" "$test_root/linked repository"
+printf 'y\n' | install_link "$directory_source" "$test_root/linked repository/zshconfig.d"
+[ -d "$directory_source" ] && [ ! -L "$directory_source" ] || fail 'Directory was replaced through a symlinked parent'
+
 ln -s "$test_root/missing" "$test_root/broken link"
 printf 'y\n' | install_link "$source_path" "$test_root/broken link"
 [ "$(cat "$test_root/broken link")" = repository ] || fail 'Broken link was not replaced'
