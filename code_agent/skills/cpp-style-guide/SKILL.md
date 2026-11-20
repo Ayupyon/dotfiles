@@ -30,11 +30,10 @@ or validation commands, including `AGENTS.md`, `.clang-format`, `_clang-format`,
   Declare pointer and reference variables separately.
 - Use braces for control-flow bodies. Write every non-empty statement block,
   function body, and lambda body over multiple lines, even when it contains only
-  one statement. Empty bodies may stay on one line as `{}`. Keep Google's attached
-  opening braces, with statements and the closing brace of non-empty bodies on
-  following lines. Apply this to constructors, destructors, inline member
-  functions, branches, and loops as well. Braced initializer lists may stay on one
-  line.
+  one statement. Keep Google's attached opening braces, with statements and the
+  closing brace of non-empty bodies on following lines. Apply this to constructors,
+  destructors, inline member functions, branches, and loops as well.
+  Braced initializer lists may stay on one line.
 
 ```cpp
 void AppendSuffix(const std::string &suffix, std::string *text) {
